@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DUHIoaMBwvJ8PY3aCm4s3i0dgtSBsrSbeyBVsmAEX9GE0K5NSLR7zTN33Ys4eV0LTxrDgIjjRy+RMbifd/cLfg==",
+  "dgSpecHash": "+KeS4fBIZ38WdziM4IlHAfkjBhFJcS5LDidoemU9Ym33WDN5TSU8HCFF8qf8CfO78Uej34K2R2TYGoXTyxWotw==",
   "success": true,
-  "projectFilePath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
+  "projectFilePath": "F:\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii\\TaskMatvii.csproj",
+      "projectUniqueName": "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj",
       "projectName": "TaskMatvii",
-      "projectPath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii\\TaskMatvii.csproj",
+      "projectPath": "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii\\obj\\",
+      "outputPath": "F:\\MatviiTask\\TaskMatvii\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

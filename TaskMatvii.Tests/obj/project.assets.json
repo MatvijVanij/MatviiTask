@@ -4644,11 +4644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
+      "projectUniqueName": "F:\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
       "projectName": "TaskMatvii.Tests",
-      "projectPath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
+      "projectPath": "F:\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii.Tests\\obj\\",
+      "outputPath": "F:\\MatviiTask\\TaskMatvii.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4665,8 +4665,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Task Matvii\\TaskMatvii\\TaskMatvii\\TaskMatvii.csproj": {
-              "projectPath": "F:\\Task Matvii\\TaskMatvii\\TaskMatvii\\TaskMatvii.csproj"
+            "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj": {
+              "projectPath": "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj"
             }
           }
         }

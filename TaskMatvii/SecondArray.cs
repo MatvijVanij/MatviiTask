@@ -22,7 +22,7 @@ namespace TaskMatvii
             }
             return min;
         }
-        public static int MaxElementsSecondArrays(int[,] array)
+        public static int OutputMaxElementsSecondArrays(int[,] array)
         {
             int max;
             max = array[0, 0];
@@ -38,7 +38,7 @@ namespace TaskMatvii
             }
             return max;
         }
-        public static int[] IndexMinElementsSecondArrays(int[,] array)
+        public static int[] OutputIndexMinElementsSecondArrays(int[,] array)
         {
             int min;
             int indexi = 0;
@@ -58,7 +58,7 @@ namespace TaskMatvii
             }
             return new int[2] { indexi, indexj };
         }
-        public static int[] IndexMaxElementsSecondArrays(int[,] array)
+        public static int[] OutputIdexMaxElementsSecondArrays(int[,] array)
         {
             int max;
             int indexi = 0;
@@ -78,7 +78,7 @@ namespace TaskMatvii
             }
             return new int[2] { indexi, indexj };
         }
-        public static int[,] TransposeMatrix(int[,] array)
+        public static int[,] OutputTransposeMatrix(int[,] array)
         {
             int[,] tarray = new int[array.GetLength(1), array.GetLength(0)];
             for (int i = 0; i < tarray.GetLength(1); i++)

@@ -50,3 +50,16 @@ F:\Task Matvii\TaskMatvii\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.csproj.C
 F:\Task Matvii\TaskMatvii\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.dll
 F:\Task Matvii\TaskMatvii\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.pdb
 F:\Task Matvii\TaskMatvii\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.genruntimeconfig.cache
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.exe
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.deps.json
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.runtimeconfig.json
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.runtimeconfig.dev.json
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.dll
+F:\MatviiTask\TaskMatvii\bin\Debug\netcoreapp3.1\TaskMatvii.pdb
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.csprojAssemblyReference.cache
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.AssemblyInfoInputs.cache
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.AssemblyInfo.cs
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.csproj.CoreCompileInputs.cache
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.dll
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.pdb
+F:\MatviiTask\TaskMatvii\obj\Debug\netcoreapp3.1\TaskMatvii.genruntimeconfig.cache

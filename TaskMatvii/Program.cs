@@ -21,7 +21,7 @@ namespace TaskMatvii
             Console.WriteLine();
 
 
-            int[,] a = SecondArray.TransposeMatrix(array);
+            int[,] a = SecondArray.OutputTransposeMatrix(array);
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j <a.GetLength(1); j++)

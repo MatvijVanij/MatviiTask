@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace TaskMatvii.Tests
 {
@@ -19,11 +20,22 @@ namespace TaskMatvii.Tests
         [TestCase(-1, -5, 3)]
         [TestCase(1, -14, 2)]
         [TestCase(-10, 4, 4)]
-        public void DeterminingLocationPoint_WhenAandBPointCoordinates_ShouldPointliesInQuarter(int x, int y, int expected)
+        public void DeterminingLocationPoint_WhenXandYPointCoordinates_ShouldPointliesInQuarter(int x, int y, int expected)
         {
             int actual = Branching.DeterminingLocationPoint(x, y);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0, 1)]
+        [TestCase(1, 0)]
+        [TestCase(0, 0)]
+        public void DeterminingLocationPoint_WhenXorYEqualliZero_ShouldArgumentExeption(int x, int y)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Branching.DeterminingLocationPoint(x, y);
+            });
         }
 
         [TestCase(4, 1, 1, new int[] { 1, 1, 4 })]
@@ -48,15 +60,36 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void GetQuadricEquationRoots_WhenAEquellsZero_ShoudArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Branching.GetQuadricEquationRoots(0, 2, 4);
+            });
+        }
+
         [TestCase(24, "Двадцять  четыри")]
         [TestCase(11, "Одинадцать  ")]
         [TestCase(61, "Шестдесят  один")]
 
-        public void NumberStamp_WhenAisNumber_ShoudCapitalizedNumber(int a, string expected)
+        public void OutputNumberStamp_WhenAisNumber_ShoudCapitalizedNumber(int a, string expected)
         {
-            string actual = Branching.NumberStamp(a);
+            string actual = Branching.OutputNumberStamp(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(9)]
+        [TestCase(100)]
+        [TestCase(0)]
+        [TestCase(-23)]
+        public void OutputNumberStamp_WhenAisNoEquellTenToNinetyNine_ShoudExceptionArgumentOutsOfTheReange(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                Branching.OutputNumberStamp(a);
+            });
         }
     }
 

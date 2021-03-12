@@ -34,15 +34,15 @@ namespace TaskMatvii
         {
             if (a == 0)
             {
-                throw new Exception("a = 0 division by zero this is not an equation");
+                throw new DivideByZeroException("a = 0 division by zero this is not an equation");
             }
             return (c - b) / a;
         }
-        public static int[] MappinglineEquation(int x1, int y1, int x2, int y2)
+        public static int[] MappingLineEquation(int x1, int y1, int x2, int y2)
         {
             if (x1 == x2)
             {
-                throw new DivideByZeroException("x1 no == x2 . Division by zero");
+                throw new ArgumentException("x1 no == x2 .Argumends retern Division by zero");
             }
             int a = (y2 - y1) / (x2 - x1);
             int b = y1 - a * x1;

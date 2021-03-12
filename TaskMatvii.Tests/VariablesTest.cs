@@ -73,15 +73,36 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0, 1, 3)]
+        [TestCase(0, 0, 0)]
+        public void SolvingLinearEquation_WhenAEqualZero_ShouldThrowDividedByZeroException(int a, int b, int c)
+        {
+            Assert.Throws<DivideByZeroException>(() =>
+            {
+                Variables.SolvingLinearEquation(a, b, c);
+            });
+        }
+
         [TestCase(1, 1, 2, 2, new int[] { 1, 0 })]
         [TestCase(0, -2, 2, 6, new int[] { 4, -2 })]
         [TestCase(5, 10, 10, 5, new int[] { -1, 15 })]
         [TestCase(4, 1, 7, 2, new int[] { 0, 1 })]
         public void MappinglineEquationTests_WhenKeepCoordinates2Points_ShoudEquationOfStraightLine(int x1, int y1, int x2, int y2, int[] expected)
         {
-            int[] actual = Variables.MappinglineEquation(x1, y1, x2, y2);
+            int[] actual = Variables.MappingLineEquation(x1, y1, x2, y2);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0,1,0,3)]
+        [TestCase(1,6,1,-4)]
+        [TestCase(-4,6,-4,7)]
+        public void MappinglineEquationTests_WhenX1eqwelX2_ShoudReturnArgumentException(int x1, int y1, int x2, int y2)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Variables.MappingLineEquation(x1, y1, x2, y2);
+            });
         }
     }
 }

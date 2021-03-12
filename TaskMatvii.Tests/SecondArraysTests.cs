@@ -55,11 +55,11 @@ namespace TaskMatvii.Tests
         [TestCase(1, 4)]
         [TestCase(2, 5)]
         [TestCase(3, 6)]
-        public void OutputTransposeMatrix_WhenAraaysLoaded_ShoudReternTransposeMatrix(int mockNumber, int expected)
+        public void OutputTransposeMatrix_WhenAraaysLoaded_ShoudReternTransposeMatrix(int mockNumber, int mockNumber1)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
 
-            int[,] expected  = DoubleArrayMock.GetMock(mockNumber);
+            int[,] expected  = DoubleArrayMock.GetMock(mockNumber1);
 
             int[,] actual = SecondArray.OutputTransposeMatrix(array);
 

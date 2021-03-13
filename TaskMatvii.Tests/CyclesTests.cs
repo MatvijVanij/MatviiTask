@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace TaskMatvii.Tests
 {
@@ -19,6 +20,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void Exponentiation_WhenBNegativeAndAEquvellZero_ShouArgumentExceptin()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Cycles.Exponentiation(0, -4);
+            });
+        }
+
         [TestCase(2, 10, new int[] { 2, 4, 6, 8, 10 })]
         [TestCase(50, 100, new int[] { 50, 100 })]
         [TestCase(30, 100, new int[] { 30, 60, 90 })]
@@ -27,6 +37,25 @@ namespace TaskMatvii.Tests
             int[] actual = Cycles.OutputNumbersDivisibleA(a, b);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OutputNumbersDivisibleA_WhenAEquvellZero_ShoudDividedByZeroException()
+        {
+            Assert.Throws<DivideByZeroException>(() =>
+            {
+                Cycles.OutputNumbersDivisibleA(0, 19);
+            });
+        }
+
+        [TestCase(4, -4)]
+        [TestCase(4, 1001)]
+        public void OutputNumbersDivisibleA_WhenBbigerOneThousandAndLessOne_ShoudBOutOfTheRenge(int a, int b)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                Cycles.OutputNumbersDivisibleA(a, b);
+            });
         }
 
         [TestCase(100, 10)]
@@ -40,6 +69,16 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0)]
+        [TestCase(-4)]
+        public void OutputNumbersDivisibleA_WhenALessZero_ShoudArgumentOutOfRangeException(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                Cycles.OutputPrintPositiveIntegersSquare(a);
+            });
+        }
+
         [TestCase(57, 19)]
         [TestCase(100, 50)]
         [TestCase(21, 7)]
@@ -49,6 +88,16 @@ namespace TaskMatvii.Tests
             int actual = Cycles.PrintGreatestВivisor(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-4)]
+        [TestCase(-323)]
+        public void PrintGreatestВivisor_WhenALessZero_ShoudArgumentOutOfRangeException(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                Cycles.PrintGreatestВivisor(a);
+            });
         }
 
         [TestCase(0, 22, 42)]
@@ -73,15 +122,37 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0)]
+        [TestCase(-41)]
+        public void PrintNumberOfFibonacci_WhenAIsLeesZero_ShouldArgumentOutOfRangeException(int a)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                Cycles.PrintNumberOfFibonacci(a);
+            });
+        }
+
         [TestCase(13, 26, 13)]
         [TestCase(10, 55, 5)]
         [TestCase(34, 51, 17)]
         [TestCase(22, 1, 1)]
+
         public void DivisorUsingEuclidAlgorithm_WhenAandBPassed_ShouldReternBiggerDivider(int a, int b, int expected)
         {
             int actual = Cycles.DivisorUsingEuclidAlgorithm(a, b);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(2, -3)]
+        [TestCase(-41, -4)]
+        [TestCase(0, 0)]
+        public void DivisorUsingEuclidAlgorithm_WhenAAndBLessOrEquelZero_ShouldArgumentException(int a, int b)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Cycles.DivisorUsingEuclidAlgorithm(a, b);
+            });
         }
 
         [TestCase(125, 5)]
@@ -95,10 +166,22 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(-41)]
+        [TestCase(0)]
+        public void BinarySearch_WhenALessZero_ShouldArgumentException(int a)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Cycles.BinarySearch(a);
+            });
+        }
+
         [TestCase(125234, 3)]
         [TestCase(12013213, 5)]
         [TestCase(123456789, 5)]
         [TestCase(1, 1)]
+        [TestCase(-12013213, 5)]
+        [TestCase(0, 0)]
         public void FindCountOddElements_WhenAPassed_ShouldReternQuantityOddElements(int a, int expected)
         {
             int actual = Cycles.FindCountOddElements(a);
@@ -117,21 +200,44 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(-4341)]
+        [TestCase(0)]
+        public void FindNumberThatMirrorImage_WhenALessZero_ShouldArgumentException(int a)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Cycles.FindNumberThatMirrorImage(a);
+            });
+        }
+
         [TestCase(12, new int[] { 2, 4, 6, 8, 12 })]
         [TestCase(5, new int[] { 2, 4 })]
         [TestCase(20, new int[] { 2, 4, 6, 8, 12, 14, 16, 18, 20 })]
         [TestCase(1, new int[] { })]
+        [TestCase(0, new int[] { })]
         public void PrintNumbersSumEvenDigitsSumOddOnes_WhenAPassed_ShouldReterntheSumEvenGreaterThanOddSum(int a, int[] expected)
         {
             int[] actual = Cycles.PrintNumbersSumEvenDigitsSumOddOnes(a);
 
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void PrintNumbersSumEvenDigitsSumOddOnes_WhenAnegative_ShouldRetern()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                Cycles.PrintNumbersSumEvenDigitsSumOddOnes(-23);
+            });
+        }
 
-        [TestCase(125234, 432521, true)]
+        [TestCase(125234, 43252, true)]
         [TestCase(0, 1, false)]
-        [TestCase(123456789, 987654321, true)]
+        [TestCase(123456789, 98765432, true)]
         [TestCase(1, 1, true)]
+        [TestCase(-1, 1, true)]
+        [TestCase(-125234, -43252, true)]
+        [TestCase(123456,78906, true)]
+        [TestCase(171, 8671, true)]
         public void CheckDuplicateNumbers_WhenAandBPassed_ShouldReternYasorNoSameNumbers(int a, int b, bool expected)
         {
             bool actual = Cycles.CheckDuplicateNumbers(a, b);

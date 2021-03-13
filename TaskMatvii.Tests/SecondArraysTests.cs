@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-
+using System;
 namespace TaskMatvii.Tests
 {
     public class SecondArraysTests
@@ -15,6 +15,14 @@ namespace TaskMatvii.Tests
 
             Assert.AreEqual(expected, actual);
         }
+        [TestCase(null)]
+        public void OutputMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int[,] array)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.OutputMinElementsSecondArrays(array);
+            });
+        }
 
         [TestCase(1, 9)]
         [TestCase(2, -1)]
@@ -26,6 +34,15 @@ namespace TaskMatvii.Tests
             int actual = SecondArray.OutputMaxElementsSecondArrays(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OutputMaxnElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.OutputMaxElementsSecondArrays(null);
+            });
         }
 
         [TestCase(1, new int[] { 0, 0 })]
@@ -40,6 +57,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void OutputIndexMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.OutputIndexMinElementsSecondArrays(null);
+            });
+        }
+
         [TestCase(1, new int[] { 2, 2 })]
         [TestCase(2, new int[] { 0, 0 })]
         [TestCase(3, new int[] { 2, 2 })]
@@ -52,6 +78,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void OutputIdexMaxElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.OutputIdexMaxElementsSecondArrays(null);
+            });
+        }
+
         [TestCase(1, 4)]
         [TestCase(2, 5)]
         [TestCase(3, 6)]
@@ -59,11 +94,20 @@ namespace TaskMatvii.Tests
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
 
-            int[,] expected  = DoubleArrayMock.GetMock(mockNumber1);
+            int[,] expected = DoubleArrayMock.GetMock(mockNumber1);
 
             int[,] actual = SecondArray.OutputTransposeMatrix(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OutputTransposeMatrix_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.OutputTransposeMatrix(null);
+            });
         }
 
         [TestCase(1, 1)]
@@ -76,6 +120,15 @@ namespace TaskMatvii.Tests
             int actual = SecondArray.FindingNumberMaxElementsSecond(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void FindingNumberMaxElementsSecond_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                SecondArray.FindingNumberMaxElementsSecond(null);
+            });
         }
 
     }

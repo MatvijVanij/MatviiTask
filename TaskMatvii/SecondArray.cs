@@ -8,121 +8,163 @@ namespace TaskMatvii
     {
         public static int OutputMinElementsSecondArrays(int[,] array)
         {
-            int min = 0;
-            min = array[0, 0];
-            for (int i = 0; i < array.GetLength(0); i++)
+            if (array != null)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int min = 0;
+                min = array[0, 0];
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
-                    if (min > array[i, j])
+                    for (int j = 0; j < array.GetLength(1); j++)
                     {
-                        min = array[i, j];
+                        if (min > array[i, j])
+                        {
+                            min = array[i, j];
+                        }
                     }
                 }
+                return min;
             }
-            return min;
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
         public static int OutputMaxElementsSecondArrays(int[,] array)
         {
-            int max;
-            max = array[0, 0];
-            for (int i = 0; i < array.GetLength(0); i++)
+            if (array != null)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int max;
+                max = array[0, 0];
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
-                    if (max < array[i, j])
+                    for (int j = 0; j < array.GetLength(1); j++)
                     {
-                        max = array[i, j];
+                        if (max < array[i, j])
+                        {
+                            max = array[i, j];
+                        }
                     }
                 }
+                return max;
             }
-            return max;
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
         public static int[] OutputIndexMinElementsSecondArrays(int[,] array)
         {
-            int min;
-            int indexi = 0;
-            int indexj = 0;
-            min = array[0, 0];
-            for (int i = 0; i < array.GetLength(0); i++)
+            if (array != null)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int min;
+                int indexi = 0;
+                int indexj = 0;
+                min = array[0, 0];
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
-                    if (min > array[i, j])
+                    for (int j = 0; j < array.GetLength(1); j++)
                     {
-                        min = array[i, j];
-                        indexi = i;
-                        indexj = j;
+                        if (min > array[i, j])
+                        {
+                            min = array[i, j];
+                            indexi = i;
+                            indexj = j;
+                        }
                     }
                 }
+                return new int[2] { indexi, indexj };
             }
-            return new int[2] { indexi, indexj };
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
         public static int[] OutputIdexMaxElementsSecondArrays(int[,] array)
         {
-            int max;
-            int indexi = 0;
-            int indexj = 0;
-            max = array[0, 0];
-            for (int i = 0; i < array.GetLength(0); i++)
+            if (array != null)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int max;
+                int indexi = 0;
+                int indexj = 0;
+                max = array[0, 0];
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
-                    if (max < array[i, j])
+                    for (int j = 0; j < array.GetLength(1); j++)
                     {
-                        max = array[i, j];
-                        indexi = i;
-                        indexj = j;
+                        if (max < array[i, j])
+                        {
+                            max = array[i, j];
+                            indexi = i;
+                            indexj = j;
+                        }
                     }
                 }
+                return new int[2] { indexi, indexj };
             }
-            return new int[2] { indexi, indexj };
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
         public static int[,] OutputTransposeMatrix(int[,] array)
         {
-            int[,] tarray = new int[array.GetLength(1), array.GetLength(0)];
-            for (int i = 0; i < tarray.GetLength(1); i++)
+            if (array != null)
             {
-                for (int j = 0; j < tarray.GetLength(0); j++)
+                int[,] tarray = new int[array.GetLength(1), array.GetLength(0)];
+                for (int i = 0; i < tarray.GetLength(1); i++)
                 {
-                    tarray[j, i] = array[i, j];
+                    for (int j = 0; j < tarray.GetLength(0); j++)
+                    {
+                        tarray[j, i] = array[i, j];
+                    }
                 }
+                return tarray;
             }
-            return tarray;
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
         public static int FindingNumberMaxElementsSecond(int[,] array)
         {
-            int count = 0;
-            for (int i = 0; i < array.GetLength(0); i++)
+            if (array != null)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int count = 0;
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
-                    bool elementmax = true;
-                    for (int di = -1; di <= 1; di++)
+                    for (int j = 0; j < array.GetLength(1); j++)
                     {
-                        for (int dj = -1; dj <= 1; dj++)
+                        bool elementmax = true;
+                        for (int di = -1; di <= 1; di++)
                         {
-                            if ((i + di) >= 0 && (i + di) < array.GetLength(0) && (j + dj) >= 0 && (j + dj) < array.GetLength(1) && !(di == 0 && dj == 0))
+                            for (int dj = -1; dj <= 1; dj++)
                             {
-                                if (array[i, j] > array[i + di, j + dj])
+                                if ((i + di) >= 0 && (i + di) < array.GetLength(0) && (j + dj) >= 0 && (j + dj) < array.GetLength(1) && !(di == 0 && dj == 0))
                                 {
+                                    if (array[i, j] > array[i + di, j + dj])
+                                    {
 
-                                }
-                                else
-                                {
-                                    elementmax = false;
-                                    break;
+                                    }
+                                    else
+                                    {
+                                        elementmax = false;
+                                        break;
+                                    }
                                 }
                             }
                         }
-                    }
-                    if (elementmax)
-                    {
-                        count++;
+                        if (elementmax)
+                        {
+                            count++;
+                        }
                     }
                 }
+                return count;
             }
-            return count;
+            else
+            {
+                throw new ArgumentException("Array is null or has zero element");
+            }
         }
     }
 }

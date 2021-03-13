@@ -201,7 +201,6 @@ namespace TaskMatvii.Tests
         }
 
         [TestCase(-4341)]
-        [TestCase(0)]
         public void FindNumberThatMirrorImage_WhenALessZero_ShouldArgumentException(int a)
         {
             Assert.Throws<ArgumentException>(() =>
@@ -214,19 +213,20 @@ namespace TaskMatvii.Tests
         [TestCase(5, new int[] { 2, 4 })]
         [TestCase(20, new int[] { 2, 4, 6, 8, 12, 14, 16, 18, 20 })]
         [TestCase(1, new int[] { })]
-        [TestCase(0, new int[] { })]
         public void PrintNumbersSumEvenDigitsSumOddOnes_WhenAPassed_ShouldReterntheSumEvenGreaterThanOddSum(int a, int[] expected)
         {
             int[] actual = Cycles.PrintNumbersSumEvenDigitsSumOddOnes(a);
 
             Assert.AreEqual(expected, actual);
         }
-        [Test]
-        public void PrintNumbersSumEvenDigitsSumOddOnes_WhenAnegative_ShouldRetern()
+
+        [TestCase(-23)]
+        [TestCase(0)]
+        public void PrintNumbersSumEvenDigitsSumOddOnes_WhenAnegative_ShouldRetern(int a)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                Cycles.PrintNumbersSumEvenDigitsSumOddOnes(-23);
+                Cycles.PrintNumbersSumEvenDigitsSumOddOnes(a);
             });
         }
 
@@ -244,6 +244,5 @@ namespace TaskMatvii.Tests
 
             Assert.AreEqual(expected, actual);
         }
-
     }
 }

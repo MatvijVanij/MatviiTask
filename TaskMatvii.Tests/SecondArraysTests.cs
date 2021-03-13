@@ -15,6 +15,7 @@ namespace TaskMatvii.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
         [TestCase(null)]
         public void OutputMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int[,] array)
         {
@@ -189,7 +190,6 @@ namespace TaskMatvii.Tests
                         {0,-6,9,9 },
                     };
                     break;
-
             }
             return result;
         }

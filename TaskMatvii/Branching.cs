@@ -94,7 +94,6 @@ namespace TaskMatvii
             }
             return array;
         }
-
         public static double[] GetQuadricEquationRoots(double a, double b, double c)
         {
             if (a != 0)
@@ -114,13 +113,10 @@ namespace TaskMatvii
                 {
                     result = null;
                 }
-
                 return result;
             }
-
             throw new ArgumentException(" a == 0 This is not Quadric Equation");
         }
-
         public static string OutputNumberStamp(int a)
         {
             if (a > 9 && a < 99)

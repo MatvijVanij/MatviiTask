@@ -236,7 +236,7 @@ namespace TaskMatvii.Tests
         [TestCase(1, 1, true)]
         [TestCase(-1, 1, true)]
         [TestCase(-125234, -43252, true)]
-        [TestCase(123456,78906, true)]
+        [TestCase(123456, 78906, true)]
         [TestCase(171, 8671, true)]
         public void CheckDuplicateNumbers_WhenAandBPassed_ShouldReternYasorNoSameNumbers(int a, int b, bool expected)
         {

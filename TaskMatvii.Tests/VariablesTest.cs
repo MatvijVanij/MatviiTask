@@ -94,9 +94,9 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(0,1,0,3)]
-        [TestCase(1,6,1,-4)]
-        [TestCase(-4,6,-4,7)]
+        [TestCase(0, 1, 0, 3)]
+        [TestCase(1, 6, 1, -4)]
+        [TestCase(-4, 6, -4, 7)]
         public void MappinglineEquationTests_WhenX1eqwelX2_ShoudReturnArgumentException(int x1, int y1, int x2, int y2)
         {
             Assert.Throws<ArgumentException>(() =>

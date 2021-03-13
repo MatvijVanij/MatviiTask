@@ -9,6 +9,9 @@ namespace TaskMatvii.Tests
         [TestCase(9, 5, 59049)]
         [TestCase(2, 10, 1024)]
         [TestCase(4, 0, 1)]
+        [TestCase(0, 3, 0)]
+        [TestCase(1, -1, 1)]
+        [TestCase(2, -2, 0.25)]
         public void Exponentiation_WhenARaiseToB_ShouldAMultipliedBTimes(double a, double b, double expected)
         {
             double actual = Cycles.Exponentiation(a, b);

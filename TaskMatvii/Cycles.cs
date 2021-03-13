@@ -9,12 +9,31 @@ namespace TaskMatvii
         public static double Exponentiation(double a, double b)
         {
             double c = 1;
-            for (int i = 0; i < b; i++)
+            if (b >= 0)
             {
-                c = c * a;
+                for (int i = 0; i < b; i++)
+                {
+                    c = c * a;
+                }
+            }
+            else
+            {
+                if (a != 0)
+                {
+                    for (int i = 0; i < Math.Abs(b); i++)
+                    {
+                        c = c * a;
+                    }
+                    c = 1 / c;
+                }
+                else
+                {
+                    throw new ArgumentException("if b < 0 -- a need positiv arguments");
+                }
             }
             return c;
         }
+
         public static int[] OutputNumbersDivisibleA(int a, int b)
         {
             int count = 0;
@@ -195,7 +214,7 @@ namespace TaskMatvii
             }
             int[] array = new int[count];
             int j = 0;
-            for (int i = 1; i <=  a; i++)
+            for (int i = 1; i <= a; i++)
             {
                 value = i;
                 int sum1 = 0;

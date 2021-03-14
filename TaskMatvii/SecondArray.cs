@@ -8,10 +8,9 @@ namespace TaskMatvii
     {
         public static int OutputMinElementsSecondArrays(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
-                int min = 0;
-                min = array[0, 0];
+                int min = array[0, 0];
                 for (int i = 0; i < array.GetLength(0); i++)
                 {
                     for (int j = 0; j < array.GetLength(1); j++)
@@ -31,7 +30,7 @@ namespace TaskMatvii
         }
         public static int OutputMaxElementsSecondArrays(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
                 int max;
                 max = array[0, 0];
@@ -54,7 +53,7 @@ namespace TaskMatvii
         }
         public static int[] OutputIndexMinElementsSecondArrays(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
                 int min;
                 int indexi = 0;
@@ -81,7 +80,7 @@ namespace TaskMatvii
         }
         public static int[] OutputIdexMaxElementsSecondArrays(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
                 int max;
                 int indexi = 0;
@@ -108,7 +107,7 @@ namespace TaskMatvii
         }
         public static int[,] OutputTransposeMatrix(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
                 int[,] tarray = new int[array.GetLength(1), array.GetLength(0)];
                 for (int i = 0; i < tarray.GetLength(1); i++)
@@ -127,7 +126,7 @@ namespace TaskMatvii
         }
         public static int FindingNumberMaxElementsSecond(int[,] array)
         {
-            if (array != null)
+            if (array != null && array.Length > 0)
             {
                 int count = 0;
                 for (int i = 0; i < array.GetLength(0); i++)

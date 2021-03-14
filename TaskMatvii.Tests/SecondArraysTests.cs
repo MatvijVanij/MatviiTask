@@ -17,10 +17,13 @@ namespace TaskMatvii.Tests
         }
 
         [TestCase(null)]
-        public void OutputMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int[,] array)
+        [TestCase(7)]
+        public void OutputMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
                 SecondArray.OutputMinElementsSecondArrays(array);
             });
         }
@@ -37,12 +40,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void OutputMaxnElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        [TestCase(null)]
+        [TestCase(7)]
+        public void OutputMaxnElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                SecondArray.OutputMaxElementsSecondArrays(null);
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
+                SecondArray.OutputMaxElementsSecondArrays(array);
             });
         }
 
@@ -58,12 +64,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void OutputIndexMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        [TestCase(null)]
+        [TestCase(7)]
+        public void OutputIndexMinElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                SecondArray.OutputIndexMinElementsSecondArrays(null);
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
+                SecondArray.OutputIndexMinElementsSecondArrays(array);
             });
         }
 
@@ -79,12 +88,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void OutputIdexMaxElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        [TestCase(null)]
+        [TestCase(7)]
+        public void OutputIdexMaxElementsSecondArrays_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                SecondArray.OutputIdexMaxElementsSecondArrays(null);
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
+                SecondArray.OutputIdexMaxElementsSecondArrays(array);
             });
         }
 
@@ -102,12 +114,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void OutputTransposeMatrix_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        [TestCase(null)]
+        [TestCase(7)]
+        public void OutputTransposeMatrix_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                SecondArray.OutputTransposeMatrix(null);
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
+                SecondArray.OutputTransposeMatrix(array);
             });
         }
 
@@ -123,12 +138,15 @@ namespace TaskMatvii.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void FindingNumberMaxElementsSecond_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException()
+        [TestCase(null)]
+        [TestCase(7)]
+        public void FindingNumberMaxElementsSecond_WhenAraayLenghtIOrLenghtJorAraayNull_ShoudReternArgumentException(int mockNumber)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                SecondArray.FindingNumberMaxElementsSecond(null);
+                int[,] array = DoubleArrayMock.GetMock(mockNumber);
+
+                SecondArray.FindingNumberMaxElementsSecond(array);
             });
         }
 
@@ -189,6 +207,9 @@ namespace TaskMatvii.Tests
                         {2,5,-8,-8},
                         {0,-6,9,9 },
                     };
+                    break;
+                case 7:
+                    result = new int[0, 0];
                     break;
             }
             return result;

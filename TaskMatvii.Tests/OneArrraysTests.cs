@@ -6,7 +6,7 @@ namespace TaskMatvii.Tests
     public class OneArraysTests
     {
 
-        [TestCase(new int[] { 1, 1, 4, 0 }, 0)]
+        [TestCase(new int[] { 1, 1, 4, 0 },0)]
         [TestCase(new int[] { -5, -1, 3 }, -5)]
         [TestCase(new int[] { -14, 1, 2 }, -14)]
         [TestCase(new int[] { -10, 0, 4 }, -10)]

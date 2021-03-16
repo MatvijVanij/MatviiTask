@@ -26,7 +26,7 @@ namespace TaskMatvii
 
                     c = 1 / c;
                 }
-                else//
+                else
                 {
                     throw new ArgumentException("if b < 0 -- a need positiv arguments");
                 }
@@ -59,16 +59,13 @@ namespace TaskMatvii
 
                 return array;
             }
-            else//
+            if (a == 0)
             {
-                if (a == 0)
-                {
-                    throw new DivideByZeroException("A==0 no divided by Zero");
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("B Out of Range");
-                }
+                throw new DivideByZeroException("A==0 no divided by Zero");
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("B Out of Range");
             }
 
         }
@@ -87,10 +84,7 @@ namespace TaskMatvii
 
                 return count;
             }
-            else//
-            {
-                throw new ArgumentOutOfRangeException("A less zeo");
-            }
+            throw new ArgumentOutOfRangeException("A less zeo");
         }
         public static int PrintGreatestВivisor(int a)
         {
@@ -107,10 +101,7 @@ namespace TaskMatvii
 
                 return temp;
             }
-            else//
-            {
-                throw new ArgumentOutOfRangeException("A pozitiv Value");
-            }
+            throw new ArgumentOutOfRangeException("A pozitiv Value");
         }
         public static int DisplaySumOfNumbers(int a, int b)
         {
@@ -150,10 +141,7 @@ namespace TaskMatvii
 
                 return nfibonashi;
             }
-            else//
-            {
-                throw new ArgumentOutOfRangeException("A is positiv number of line");
-            }
+            throw new ArgumentOutOfRangeException("A is positiv number of line");
         }
         public static int DivisorUsingEuclidAlgorithm(int a, int b)
         {
@@ -173,10 +161,7 @@ namespace TaskMatvii
 
                 return a;
             }
-            else//
-            {
-                throw new ArgumentException("A or B Out of range");
-            }
+            throw new ArgumentException("A or B Out of range");
         }
         public static int BinarySearch(int a)
         {
@@ -210,10 +195,7 @@ namespace TaskMatvii
 
                 return midl;
             }
-            else//
-            {
-                throw new ArgumentException("a is invalid argument");
-            }
+            throw new ArgumentException("a is invalid argument");
         }
         public static int FindCountOddElements(int a)
         {
@@ -246,10 +228,7 @@ namespace TaskMatvii
 
                 return revers;
             }
-            else//
-            {
-                throw new ArgumentException("A is not coreck this contecst");
-            }
+            throw new ArgumentException("A is not coreck this contecst");
         }
         public static int[] PrintNumbersSumEvenDigitsSumOddOnes(int a)
         {
@@ -312,10 +291,7 @@ namespace TaskMatvii
 
                 return array;
             }
-            else
-            {
-                throw new ArgumentException(" A need positiv value");
-            }
+            throw new ArgumentException(" A need positiv value");
         }
 
         public static bool CheckDuplicateNumbers(int a, int b)

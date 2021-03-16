@@ -69,9 +69,9 @@ namespace TaskMatvii.Tests
             });
         }
 
-        [TestCase(24, "Двадцять  четыри")]//
-        [TestCase(11, "Одинадцать  ")]
-        [TestCase(61, "Шестдесят  один")]
+        [TestCase(24, "Двадцять четыри")]
+        [TestCase(11, "Одинадцать ")]
+        [TestCase(61, "Шестдесят один")]
         public void OutputNumberStamp_WhenAisNumber_ShoudCapitalizedNumber(int a, string expected)
         {
             string actual = Branching.OutputNumberStamp(a);

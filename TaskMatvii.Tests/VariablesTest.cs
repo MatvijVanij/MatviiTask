@@ -31,9 +31,9 @@ namespace TaskMatvii.Tests
         [TestCase(0, 5, 5, 0)]
         [TestCase(4, -3, -3, 4)]
         [TestCase(10, 4, 4, 10)]
-        public void ReplacementOfValues_WhenSwapAB_ShouldReturnBA(int a, int b, int expectedA, int expectedB)
+        public void SwapOfValuesOfValues_WhenSwapAB_ShouldReturnBA(int a, int b, int expectedA, int expectedB)
         {
-            Variables.ReplacementOfValues(ref a, ref b);
+            Variables.SwapOfValues(ref a, ref b);
 
             Assert.AreEqual(expectedA, a);
             Assert.AreEqual(expectedB, b);

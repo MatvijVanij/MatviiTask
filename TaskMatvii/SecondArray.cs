@@ -4,28 +4,14 @@ namespace TaskMatvii
 {
     public class SecondArray
     {
-        public static int OutputMinElementsSecondArrays(int[,] array)//
+        public static int OutputMinElementsSecondArrays(int[,] array)
         {
             if (array != null && array.Length > 0)
             {
-                int min = array[0, 0];
-                for (int i = 0; i < array.GetLength(0); i++)
-                {
-                    for (int j = 0; j < array.GetLength(1); j++)
-                    {
-                        if (min > array[i, j])
-                        {
-                            min = array[i, j];
-                        }
-                    }
-                }
+                return array[OutputIndexMinElementsSecondArrays(array)[0],OutputIndexMinElementsSecondArrays(array)[1]] ;
+            }
 
-                return min;
-            }
-            else
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int OutputMaxElementsSecondArrays(int[,] array)
         {
@@ -47,7 +33,7 @@ namespace TaskMatvii
                 return max;
             }
 
-            throw new ArgumentException("Array is null or has zero element");//
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] OutputIndexMinElementsSecondArrays(int[,] array)
         {
@@ -72,10 +58,8 @@ namespace TaskMatvii
 
                 return new int[2] { indexi, indexj };
             }
-            else
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] OutputIdexMaxElementsSecondArrays(int[,] array)
         {
@@ -91,6 +75,7 @@ namespace TaskMatvii
                     {
                         if (max < array[i, j])
                         {
+                            
                             max = array[i, j];//
                             indexi = i;
                             indexj = j;
@@ -120,10 +105,7 @@ namespace TaskMatvii
 
                 return tarray;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int FindingNumberMaxElementsSecond(int[,] array)
         {
@@ -141,15 +123,12 @@ namespace TaskMatvii
                             {
                                 if ((i + di) >= 0 && (i + di) < array.GetLength(0) && (j + dj) >= 0 && (j + dj) < array.GetLength(1) && !(di == 0 && dj == 0))
                                 {
-                                    if (array[i, j] > array[i + di, j + dj])//
-                                    {
-
-                                    }
-                                    else
+                                    if (array[i, j] <= array[i + di, j + dj])
                                     {
                                         elementmax = false;
                                         break;
                                     }
+
                                 }
                             }
                         }
@@ -162,10 +141,7 @@ namespace TaskMatvii
 
                 return count;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
     }
 }

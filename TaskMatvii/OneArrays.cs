@@ -4,25 +4,13 @@ namespace TaskMatvii
 {
     public class OneArrays
     {
-        public static int OutputMinElementsArray(int[] array)//
+        public static int OutputMinElementsArray(int[] array)
         {
             if (array != null && array.Length != 0)
             {
-                int min = array[0];
-                for (int i = 1; i < array.Length; i++)
-                {
-                    if (min > array[i])
-                    {
-                        min = array[i];
-                    }
-                }
-
-                return min;
+                return array[OutputIndexMinElementsArray(array)];
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int OutputMaxElementsArray(int[] array)
         {
@@ -39,10 +27,7 @@ namespace TaskMatvii
 
                 return max;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int OutputIndexMinElementsArray(int[] array)
         {
@@ -61,10 +46,7 @@ namespace TaskMatvii
 
                 return index;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int OutputIndexMaxElementsArray(int[] array)
         {
@@ -83,10 +65,7 @@ namespace TaskMatvii
 
                 return index;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int CalculateSumArrayElementsIsOddIndex(int[] array)
         {
@@ -95,17 +74,14 @@ namespace TaskMatvii
                 int count = 0;
                 for (int i = 0; i < array.Length; i++)
                 {
-                    if (i % 2 == 1)//
+                    if (i % 2 != 0)
                     {
                         count += array[i];
                     }
                 }
                 return count;
             }
-            else
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] OutputReverseArray(int[] array)
         {
@@ -113,18 +89,13 @@ namespace TaskMatvii
             {
                 for (int i = 0; i < array.Length / 2; i++)
                 {
-                    int temp;
-                    temp = array[i];//
-                    array[i] = array[array.Length - i - 1];
-                    array[array.Length - i - 1] = temp;
+                    int temp = array.Length - i - 1;
+                    Variables.SwapOfValues(ref array[i], ref array[temp]);
                 }
 
                 return array;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int CountNumberOddElementsArray(int[] array)
         {
@@ -133,7 +104,7 @@ namespace TaskMatvii
                 int count = 0;
                 for (int i = 0; i < array.Length; i++)
                 {
-                    if (array[i] % 2 != 0)//
+                    if (array[i] % 2 != 0)
                     {
                         count++;
                     }
@@ -141,79 +112,59 @@ namespace TaskMatvii
 
                 return count;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] ChangeArrayOfMidl(int[] array)
         {
             if (array != null && array.Length != 0)
             {
-                int temp;
                 for (int i = 0; i < array.Length / 2; i++)
                 {
-                    temp = array[i];//
-                    array[i] = array[i + array.Length / 2 + array.Length % 2];//
-                    array[i + array.Length / 2 + array.Length % 2] = temp;
+                    int temp = i + array.Length / 2 + array.Length % 2;
+                    Variables.SwapOfValues(ref array[i], ref array[temp]);
                 }
 
                 return array;
             }
-            else
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] SortAarrayBubbleIncrease(int[] array)
         {
             if (array != null && array.Length != 0)
             {
-                int temp;
                 for (int i = 0; i < array.Length - 1; i++)
                 {
                     for (int j = i + 1; j < array.Length; j++)
                     {
                         if (array[i] > array[j])
                         {
-                            temp = array[i];//
-                            array[i] = array[j];
-                            array[j] = temp
+                            Variables.SwapOfValues(ref array[i], ref array[j]);
                         }
                     }
                 }
 
                 return array;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
         public static int[] SortAarraySelectDecrease(int[] array)
         {
             if (array != null && array.Length != 0)
             {
-                int temp;
                 for (int i = 0; i < array.Length - 1; i++)
                 {
                     for (int j = i + 1; j < array.Length; j++)
                     {
                         if (array[i] < array[j])
                         {
-                            temp = array[i];//
-                            array[i] = array[j];
-                            array[j] = temp;
+                            Variables.SwapOfValues(ref array[i], ref array[j]);
                         }
                     }
                 }
 
                 return array;
             }
-            else//
-            {
-                throw new ArgumentException("Array is null or has zero element");
-            }
+            throw new ArgumentException("Array is null or has zero element");
         }
     }
 }

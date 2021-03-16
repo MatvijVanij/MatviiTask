@@ -4639,25 +4639,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matvi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matvi\\OneDrive\\Рабочий стол\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
+      "projectUniqueName": "F:\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
       "projectName": "TaskMatvii.Tests",
-      "projectPath": "C:\\Users\\matvi\\OneDrive\\Рабочий стол\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
-      "packagesPath": "C:\\Users\\matvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matvi\\OneDrive\\Рабочий стол\\MatviiTask\\TaskMatvii.Tests\\obj\\",
+      "projectPath": "F:\\MatviiTask\\TaskMatvii.Tests\\TaskMatvii.Tests.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "F:\\MatviiTask\\TaskMatvii.Tests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\matvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4670,8 +4665,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\matvi\\OneDrive\\Рабочий стол\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj": {
-              "projectPath": "C:\\Users\\matvi\\OneDrive\\Рабочий стол\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj"
+            "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj": {
+              "projectPath": "F:\\MatviiTask\\TaskMatvii\\TaskMatvii.csproj"
             }
           }
         }
@@ -4714,7 +4709,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

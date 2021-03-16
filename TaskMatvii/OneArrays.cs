@@ -6,11 +6,7 @@ namespace TaskMatvii
     {
         public static int OutputMinElementsArray(int[] array)
         {
-            if (array != null && array.Length != 0)
-            {
                 return array[OutputIndexMinElementsArray(array)];
-            }
-            throw new ArgumentException("Array is null or has zero element");
         }
         public static int OutputMaxElementsArray(int[] array)
         {

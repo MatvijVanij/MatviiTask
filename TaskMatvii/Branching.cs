@@ -237,10 +237,6 @@ namespace TaskMatvii
                             break;
                     }
                 }
-                else
-                {
-
-                }
                 return str1 + " " + str2;
             }
                 throw new ArgumentOutOfRangeException("Value out of range"); 

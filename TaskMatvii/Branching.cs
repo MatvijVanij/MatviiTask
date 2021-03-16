@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TaskMatvii
 {
@@ -21,12 +19,17 @@ namespace TaskMatvii
             {
                 c = a - b;
             }
+
             return c;
         }
         public static int DeterminingLocationPoint(int x, int y)
         {
-            if (y == 0 || x == 0) { throw new ArgumentException("point is on the y--axis ory x--axis"); }
-            int c = 0;
+            if (y == 0 || x == 0)
+            {
+                throw new ArgumentException("point is on the y--axis ory x--axis");
+            }
+
+            int c;
             if (x > 0)
             {
                 if (y > 0)
@@ -49,11 +52,12 @@ namespace TaskMatvii
                     c = 3;
                 }
             }
+
             return c;
         }
         public static int[] SortingThreeElementsBrancing(int a, int b, int c)
         {
-            int[] array = new int[3];
+            int[] array;
             if (a > b && a > c)
             {
                 if (b > c)
@@ -92,6 +96,7 @@ namespace TaskMatvii
 
                 }
             }
+
             return array;
         }
         public static double[] GetQuadricEquationRoots(double a, double b, double c)
@@ -113,8 +118,10 @@ namespace TaskMatvii
                 {
                     result = null;
                 }
+
                 return result;
             }
+
             throw new ArgumentException(" a == 0 This is not Quadric Equation");
         }
         public static string OutputNumberStamp(int a)
@@ -123,8 +130,8 @@ namespace TaskMatvii
             {
                 int c = a / 10;
                 int b = a % 10;
-                string str1 = "";
-                string str2 = "";
+                string str1 = string.Empty;
+                string str2 = string.Empty;
                 switch (c)
                 {
                     case 1:
@@ -162,7 +169,6 @@ namespace TaskMatvii
                                 break;
                             default:
                                 break;
-
                         }
 
                         break;
@@ -235,9 +241,9 @@ namespace TaskMatvii
                 {
 
                 }
-                return str1 + "  " + str2;
+                return str1 + " " + str2;
             }
-            else
+            else//
             {
                 throw new ArgumentOutOfRangeException("Value out of range"); 
             }

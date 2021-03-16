@@ -9,7 +9,7 @@ namespace TaskMatvii.Tests
         [TestCase(0, 5, 5)]
         [TestCase(4, 0, -5)]
         [TestCase(10, 4, -11)]
-        public void SolvingEquations_WhenABSubstituteInEquation_ShouldSolution(int a, int b, int expected)
+        public void SolvingEquations_WhenABSubstituteInEquation_ShouldSolveEquation(int a, int b, int expected)
         {
             int actual = Variables.SolvingEquations(a, b);
 
@@ -34,18 +34,15 @@ namespace TaskMatvii.Tests
         public void ReplacementOfValues_WhenSwapAB_ShouldReturnBA(int a, int b, int expectedA, int expectedB)
         {
             Variables.ReplacementOfValues(ref a, ref b);
-            int actualA = a;
-            int actualB = b;
 
-            Assert.AreEqual(expectedA, actualA);
-            Assert.AreEqual(expectedB, actualB);
+            Assert.AreEqual(expectedA, a);
+            Assert.AreEqual(expectedB, b);
         }
 
         [TestCase(2, 2, new int[] { 1, 0 })]
         [TestCase(5, 2, new int[] { 2, 1 })]
         [TestCase(17, 5, new int[] { 3, 2 })]
         [TestCase(-21, 10, new int[] { -2, -1 })]
-
         public void DivisionAndRemainderDivision_WhenValidABPassed_ShouldReturnDivisionAndRemainder(int a, int b, int[] expected)
         {
             int[] actual = Variables.DivisionAndRemainderDivision(a, b);

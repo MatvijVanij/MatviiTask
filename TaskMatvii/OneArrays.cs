@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TaskMatvii
 {
     public class OneArrays
     {
-        public static int OutputMinElementsArray(int[] array)
+        public static int OutputMinElementsArray(int[] array)//
         {
             if (array != null && array.Length != 0)
             {
@@ -18,9 +16,10 @@ namespace TaskMatvii
                         min = array[i];
                     }
                 }
+
                 return min;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -37,16 +36,16 @@ namespace TaskMatvii
                         max = array[i];
                     }
                 }
+
                 return max;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
         }
         public static int OutputIndexMinElementsArray(int[] array)
         {
-
             if (array != null && array.Length != 0)
             {
                 int min = array[0];
@@ -59,9 +58,10 @@ namespace TaskMatvii
                         index = i;
                     }
                 }
+
                 return index;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -80,9 +80,10 @@ namespace TaskMatvii
                         index = i;
                     }
                 }
+
                 return index;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -94,7 +95,7 @@ namespace TaskMatvii
                 int count = 0;
                 for (int i = 0; i < array.Length; i++)
                 {
-                    if (i % 2 != 0)
+                    if (i % 2 == 1)//
                     {
                         count += array[i];
                     }
@@ -113,13 +114,14 @@ namespace TaskMatvii
                 for (int i = 0; i < array.Length / 2; i++)
                 {
                     int temp;
-                    temp = array[i];
+                    temp = array[i];//
                     array[i] = array[array.Length - i - 1];
                     array[array.Length - i - 1] = temp;
                 }
+
                 return array;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -131,14 +133,15 @@ namespace TaskMatvii
                 int count = 0;
                 for (int i = 0; i < array.Length; i++)
                 {
-                    if (array[i] % 2 != 0)
+                    if (array[i] % 2 != 0)//
                     {
                         count++;
                     }
                 }
+
                 return count;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -150,10 +153,11 @@ namespace TaskMatvii
                 int temp;
                 for (int i = 0; i < array.Length / 2; i++)
                 {
-                    temp = array[i];
-                    array[i] = array[i + array.Length / 2 + array.Length % 2];
+                    temp = array[i];//
+                    array[i] = array[i + array.Length / 2 + array.Length % 2];//
                     array[i + array.Length / 2 + array.Length % 2] = temp;
                 }
+
                 return array;
             }
             else
@@ -172,16 +176,16 @@ namespace TaskMatvii
                     {
                         if (array[i] > array[j])
                         {
-                            temp = array[i];
+                            temp = array[i];//
                             array[i] = array[j];
-                            array[j] = temp;
-
+                            array[j] = temp
                         }
                     }
                 }
+
                 return array;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }
@@ -197,15 +201,16 @@ namespace TaskMatvii
                     {
                         if (array[i] < array[j])
                         {
-                            temp = array[i];
+                            temp = array[i];//
                             array[i] = array[j];
                             array[j] = temp;
                         }
                     }
                 }
+
                 return array;
             }
-            else
+            else//
             {
                 throw new ArgumentException("Array is null or has zero element");
             }

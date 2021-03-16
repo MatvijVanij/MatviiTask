@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TaskMatvii
 {
@@ -13,7 +11,7 @@ namespace TaskMatvii
             {
                 for (int i = 0; i < b; i++)
                 {
-                    c = c * a;
+                    c *= a;
                 }
             }
             else
@@ -23,11 +21,12 @@ namespace TaskMatvii
                     int d = Convert.ToInt32(Math.Abs(b));
                     for (int i = 0; i < d; i++)
                     {
-                        c = c * a;
+                        c *= a;
                     }
+
                     c = 1 / c;
                 }
-                else
+                else//
                 {
                     throw new ArgumentException("if b < 0 -- a need positiv arguments");
                 }
@@ -47,19 +46,20 @@ namespace TaskMatvii
                         ++count;
                     }
                 }
+
                 int[] array = new int[count];
                 int j = 0;
                 for (int i = 1; i <= b; i++)
                 {
                     if (i % a == 0)
                     {
-                        array[j] = i;
-                        j++;
+                        array[j++] = i;
                     }
                 }
+
                 return array;
             }
-            else
+            else//
             {
                 if (a == 0)
                 {
@@ -84,9 +84,10 @@ namespace TaskMatvii
                         ++count;
                     }
                 }
+
                 return count;
             }
-            else
+            else//
             {
                 throw new ArgumentOutOfRangeException("A less zeo");
             }
@@ -103,9 +104,10 @@ namespace TaskMatvii
                         temp = i;
                     }
                 }
+
                 return temp;
             }
-            else
+            else//
             {
                 throw new ArgumentOutOfRangeException("A pozitiv Value");
             }
@@ -120,6 +122,7 @@ namespace TaskMatvii
                 a = b;
                 b = temp;
             }
+
             for (int i = a; i <= b; i++)
             {
                 if (i % 7 == 0)
@@ -127,6 +130,7 @@ namespace TaskMatvii
                     sum += i;
                 }
             }
+
             return sum;
         }
         public static int PrintNumberOfFibonacci(int a)
@@ -143,9 +147,10 @@ namespace TaskMatvii
                     n1 = n2;
                     n2 = nfibonashi;
                 }
+
                 return nfibonashi;
             }
-            else
+            else//
             {
                 throw new ArgumentOutOfRangeException("A is positiv number of line");
             }
@@ -165,9 +170,10 @@ namespace TaskMatvii
                         b -= a;
                     }
                 }
+
                 return a;
             }
-            else
+            else//
             {
                 throw new ArgumentException("A or B Out of range");
             }
@@ -192,6 +198,7 @@ namespace TaskMatvii
                         {
                             Left = midl;
                         }
+
                         midl = (right + Left) / 2;
                         basis = midl * midl * midl;
                     }
@@ -200,9 +207,10 @@ namespace TaskMatvii
                 {
                     midl = 1;
                 }
+
                 return midl;
             }
-            else
+            else//
             {
                 throw new ArgumentException("a is invalid argument");
             }
@@ -220,24 +228,25 @@ namespace TaskMatvii
                     ++count;
                 }
             }
+
             return count;
         }
         public static int FindNumberThatMirrorImage(int a)
         {
             if (a >= 0)
             {
-                int b = 0;
                 int revers = 0;
                 while (a != 0)
                 {
                     revers *= 10;
-                    b = a % 10;
+                    int b = a % 10;
                     revers = revers + b;
                     a /= 10;
                 }
+
                 return revers;
             }
-            else
+            else//
             {
                 throw new ArgumentException("A is not coreck this contecst");
             }
@@ -272,6 +281,7 @@ namespace TaskMatvii
                         ++count;
                     }
                 }
+
                 int[] array = new int[count];
                 int j = 0;
                 for (int i = 1; i <= a; i++)
@@ -292,12 +302,14 @@ namespace TaskMatvii
                             sum2 += b;
                         }
                     }
+
                     if (sum1 < sum2)
                     {
                         array[j] = i;
                         j++;
                     }
                 }
+
                 return array;
             }
             else
@@ -305,6 +317,7 @@ namespace TaskMatvii
                 throw new ArgumentException(" A need positiv value");
             }
         }
+
         public static bool CheckDuplicateNumbers(int a, int b)
         {
             bool ansewer = false;
@@ -328,6 +341,7 @@ namespace TaskMatvii
                     }
                 }
             }
+
             return ansewer;
         }
 

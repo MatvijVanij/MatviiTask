@@ -19,6 +19,7 @@ namespace TaskMatvii.Tests
 
         [TestCase(new int[] { })]
         [TestCase(new int[0])]
+        [TestCase(null)]
         public void OutputMinElementsArray_WhenAraaysNullorLenghtZero_ShoudReternArgumentException(int[] array)
         {
             Assert.Throws<ArgumentException>(() =>

@@ -7,7 +7,7 @@ namespace TaskMatvii.Tests
         [TestCase(1, 1)]
         [TestCase(2, -9)]
         [TestCase(3, -8)]
-        public void OutputMinElementsSecondArrays_WhenAraaysLoaded_ShoudReternMinElements(int mockNumber, int expected)
+        public void OutputMinElementsSecondArrays_WhenArrayPassed_ShoudReternMinElements(int mockNumber, int expected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
 
@@ -106,7 +106,6 @@ namespace TaskMatvii.Tests
         public void OutputTransposeMatrix_WhenAraaysLoaded_ShoudReternTransposeMatrix(int mockNumber, int mockNumber1)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
             int[,] expected = DoubleArrayMock.GetMock(mockNumber1);
 
             int[,] actual = SecondArray.OutputTransposeMatrix(array);
